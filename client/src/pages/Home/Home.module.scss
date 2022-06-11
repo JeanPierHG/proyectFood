@@ -1,0 +1,11 @@
+.recipesContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.homeContainer {
+  display: flex;
+  flex-direction: column;
+
+  gap: 4rem;
+}

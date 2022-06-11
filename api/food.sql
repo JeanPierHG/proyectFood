@@ -1,0 +1,1 @@
+insert into recipes values (21312,'jean','asdasd',123,'asdasd')

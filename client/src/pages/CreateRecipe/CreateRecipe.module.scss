@@ -1,0 +1,403 @@
+.container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.containerForm {
+  padding: 5rem;
+  background-color: var(--background-color);
+  box-shadow: 0px 0px 2px 2px rgba($color: #000000, $alpha: 0.3);
+  border-radius: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  align-items: center;
+  column-gap: 4rem;
+  animation: stepsInputs 2s;
+
+  label {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+}
+
+.formTitle {
+  font-size: 3.6rem;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 5rem;
+  color: var(--text-title-color);
+}
+
+.formColumnGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.containerInputImage {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+
+  .containerImage {
+    width: 100%;
+    height: 30rem;
+    border: 5px solid var(--border-color);
+
+    .image {
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .containerInputData {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .inputImageUrl {
+    font-size: 2rem;
+    border: 5px solid var(--border-color);
+    border-radius: 1rem;
+    padding: 0.8rem 1.4rem;
+    width: 30rem;
+    color: var(--text-color);
+    transition: all 0.5s;
+    font-family: inherit;
+    &:focus {
+      outline: none;
+      border: 5px solid #ffaf63;
+    }
+  }
+  .buttonAddImage {
+    cursor: pointer;
+    background-color: #ff7b00;
+    border: 5px solid #ff7b00;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    font-weight: bold;
+    font-family: inherit;
+    border-radius: 1rem;
+    color: var(--text-white-color);
+    padding: 0.5rem 1rem;
+  }
+}
+
+.containerInputTitle {
+  display: flex;
+  justify-content: center;
+  gap: 0.4rem;
+  flex-direction: column;
+  align-items: flex-start;
+  .inputTitle {
+    font-size: 2rem;
+    border: 5px solid var(--border-color);
+    border-radius: 1rem;
+    padding: 0.8rem 1.4rem;
+    width: 50rem;
+    color: var(--text-color);
+    transition: all 0.5s;
+    font-family: inherit;
+    &:focus {
+      outline: none;
+      border: 5px solid #ffaf63;
+    }
+  }
+}
+
+.containerInputSummary {
+  display: flex;
+  justify-content: center;
+  gap: 0.4rem;
+  flex-direction: column;
+  align-items: flex-start;
+  .inputSummary {
+    font-size: 2rem;
+    border: 5px solid var(--border-color);
+    border-radius: 1rem;
+    padding: 0.8rem 1.4rem;
+    width: 50rem;
+    color: var(--text-color);
+    transition: all 0.5s;
+    font-family: inherit;
+    width: 667px;
+    height: 183px;
+    resize: none;
+    &:focus {
+      outline: none;
+      border: 5px solid #ffaf63;
+    }
+  }
+}
+
+.containerInputHighScore {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+
+  .labelHighScore {
+    padding-bottom: 5px;
+  }
+  .inputHighScore::-webkit-slider-runnable-track {
+    height: 0.5rem;
+    cursor: pointer;
+    border-radius: 1rem;
+    background: #f88820;
+  }
+  .inputHighScore::-moz-range-track {
+    height: 0.5rem;
+    cursor: pointer;
+    border-radius: 1rem;
+    background: #f88820;
+  }
+
+  .spanHighScore {
+    font-family: inherit;
+    font-size: 2.4rem;
+  }
+}
+
+.formDiets {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.formDietContainer {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  row-gap: 2rem;
+}
+
+.formDietButtonContainer {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.formDietButton {
+  width: 6.4rem;
+  height: 6.4rem;
+  object-fit: cover;
+  transition: all 0.5s;
+  border-radius: 2rem;
+  background-color: #ffc894;
+  text-align: center;
+  padding: 4px;
+  &:hover {
+    transform: scale(1.2);
+  }
+}
+
+.dietSelected {
+  background-color: #ff922b;
+}
+
+.containerInputSteps {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  .containerActionsSteps {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .labelIndexStep {
+    font-size: 2.6rem;
+    font-weight: bold;
+    animation: stepsInputs 2s;
+  }
+
+  .inputStep {
+    font-size: 2rem;
+    border: 5px solid var(--border-color);
+    border-radius: 1rem;
+    padding: 0.8rem 1.4rem;
+    width: 50rem;
+    color: var(--text-color);
+    transition: all 0.5s;
+    font-family: inherit;
+    &:focus {
+      outline: none;
+      border: 5px solid #ffaf63;
+    }
+  }
+  .buttonStep {
+    font-size: 2.5rem;
+    font-weight: bold;
+    padding: 0rem 0.5rem;
+    background-color: transparent;
+    color: var(--text-white-color);
+    border-radius: 1rem;
+    cursor: pointer;
+    border: 5px solid #ff7b00;
+    background-color: #ff7b00;
+    transition: all 0.2s;
+  }
+}
+
+.formButtonSubmit {
+  margin: 0 auto;
+  margin-top: 5rem;
+  cursor: pointer;
+  background-color: #ff7b00;
+  border: 5px solid #ff7b00;
+  text-transform: uppercase;
+  font-size: 2.4rem;
+  font-weight: bold;
+  font-family: inherit;
+  border-radius: 1rem;
+  color: var(--text-white-color);
+  padding: 1rem 2rem;
+}
+
+@keyframes stepsInputs {
+  0% {
+    transform: translateY(3rem);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.errors {
+  color: red;
+  font-family: inherit;
+  font-weight: 600;
+  height: 2rem;
+}
+
+.errorNotVisible {
+  visibility: hidden;
+}
+
+.errorVisible {
+  visibility: visible;
+}
+
+.succesOverlay {
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  background-color: rgba($color: #000000, $alpha: 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.succesDetailsContainer {
+  background-color: var(--background-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 2rem;
+  padding: 6rem;
+  gap: 5rem;
+  animation: succesOverlay 1s;
+  .succesTitle {
+    font-size: 4.2rem;
+  }
+
+  .succesIcon {
+    width: 10rem;
+    object-fit: cover;
+  }
+  .succesButton {
+    border: none;
+    background-color: #ff7b00;
+    color: var(--text-white-color);
+    font-size: 3.2rem;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: all 0.7s ease;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+@keyframes succesOverlay {
+  0% {
+    transform: scale(0.1);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .container {
+    height: auto;
+  }
+  .formTitle {
+    margin-bottom: 2rem;
+  }
+  .containerForm {
+    padding: 2rem 3rem;
+  }
+
+  .form {
+    grid-template-columns: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+
+    label {
+      font-size: 1.8rem;
+    }
+  }
+
+  .containerInputImage {
+    gap: 1rem;
+    width: 100%;
+    .containerImage {
+      width: 50%;
+    }
+    .buttonAddImage {
+      font-size: 2.4rem;
+    }
+    .containerInputData {
+      .inputImageUrl {
+        padding: 0.3rem 1rem;
+        font-size: 1.8rem;
+      }
+    }
+  }
+  .formColumnGrid {
+    gap: 2rem;
+  }
+  .containerInputHighScore {
+    flex-direction: column;
+  }
+
+  .formDietContainer {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .succesOverlay {
+    top: 100%;
+    z-index: 99999;
+  }
+}

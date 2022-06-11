@@ -1,0 +1,126 @@
+.landing {
+  height: 100vh;
+  background-image: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.5522584033613445) 23%,
+      rgba(0, 0, 0, 0.5746673669467788) 49%,
+      rgba(0, 0, 0, 0.5018382352941176) 100%
+    ),
+    url('../../assets/img/landingImg.jpg');
+  background-size: cover;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.landingDetails {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10rem;
+}
+
+.landingTitle {
+  color: var(--text-white-color);
+  font-size: 12rem;
+  animation: animateTitle 2s;
+  font-weight: 700;
+  transition: all 2s;
+}
+
+.landingDescription {
+  color: var(--text-white-color);
+  font-size: 3.2rem;
+  background-color: var(--main-button-color);
+  padding: 1.2rem 1rem;
+  border-radius: 1.2rem;
+  animation: animateDescriptionPrescens 2s;
+  width: 90%;
+}
+
+.landingButton {
+  font-size: 4rem;
+  background-color: var(--main-button-color);
+  border: none;
+  color: var(--text-white-color);
+  padding: 0.4rem 2rem;
+  border-radius: 10px;
+  font-weight: 600;
+  font-family: inherit;
+  transition: all 0.2s;
+  animation: animateButtonPrescens 2s;
+  cursor: pointer;
+  &:hover {
+    transform: scale(1.2);
+  }
+  &:active {
+    transform: scale(0.9);
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .landingTitle {
+    font-size: 8rem;
+  }
+  .landingDescription {
+    font-size: 2.6rem;
+  }
+}
+
+@media screen and (max-width: 468px) {
+  .landingDetails {
+    gap: 4.2rem;
+  }
+  .landingTitle {
+    font-size: 6rem;
+    animation: none;
+  }
+
+  .landingDescription {
+    font-size: 1.6rem;
+  }
+
+  .landingButton {
+    font-size: 2.4rem;
+  }
+}
+
+@keyframes animateTitle {
+  0% {
+    transform: translateY(-10rem);
+    opacity: 0;
+  }
+
+  50% {
+    letter-spacing: 20px;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+    letter-spacing: 0;
+  }
+}
+
+@keyframes animateButtonPrescens {
+  0% {
+    transform: translateY(10rem);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes animateDescriptionPrescens {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}

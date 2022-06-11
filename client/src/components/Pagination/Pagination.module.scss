@@ -1,0 +1,30 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.paginationButton {
+  border: 5px solid var(--border-color);
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.paginationButton[disabled] {
+  visibility: hidden;
+}
+
+.buttonIcons {
+  width: 2rem;
+}
+
+.inputActive {
+  background-color: #ffa94d;
+  color: var(--text-white-color);
+}

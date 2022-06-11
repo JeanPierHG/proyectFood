@@ -1,0 +1,21 @@
+.recipesContainer {
+  padding: 4rem 6rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 4rem;
+  row-gap: 2rem;
+}
+
+@media screen and (max-width: 1400px) {
+  .recipesContainer {
+    padding: 4rem 0rem;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .recipesContainer {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+  }
+}
