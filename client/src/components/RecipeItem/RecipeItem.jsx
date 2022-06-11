@@ -10,12 +10,14 @@ const RecipeItem = (props) => {
   return (
     <article className={styles.recipeItemContainer}>
       <div className={styles.recipeItemContainerImg}>
-        <img
-          className={styles.recipeItemImg}
-          src={props.image}
-          alt='recipeimg'
-          height={231}
-        />
+        <NavLink to={`/home/${props.id}`}>
+          <img
+            className={styles.recipeItemImg}
+            src={props.image}
+            alt='recipeimg'
+            height={231}
+          />
+        </NavLink>
       </div>
       <div className={styles.recipeItemContainerDetails}>
         <div className={styles.recipeItemContainerTitle}>
